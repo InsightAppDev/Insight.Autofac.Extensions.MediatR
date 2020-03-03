@@ -1,0 +1,2 @@
+Insight.Autofac.Extensions.MediatR
+==================================
