@@ -2,6 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageVersion>0.1.0</PackageVersion>
+    <Authors>Sergey Nazarov</Authors>
+    <Description>Infrastructure extensions to easy use MediatR with Autofac. Logging and validation decorators presented</Description>
+    <Copyright>© 2020 Sergey Nazarov </Copyright>
+    <PackageProjectUrl>https://github.com/InsightAppDev/Insight.Autofac.Extensions.MediatR</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/InsightAppDev/Insight.Autofac.Extensions.MediatR</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Autofac MediatR DI Extensions</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
