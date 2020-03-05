@@ -12,5 +12,5 @@ jobs:
     script: dotnet restore && dotnet build
   - stage: publish
     name: publish nuget package
-    if: tag IS presented
+    if: tag IS present
     script: ./publish-nuget.sh "$NUGET_SOURCE" "$NUGET_KEY" "$TRAVIS_TAG"
