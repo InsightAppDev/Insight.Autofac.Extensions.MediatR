@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System;
+using System.Reflection;
 using Autofac;
 using FluentValidation;
 using MediatR;
@@ -12,6 +13,9 @@ namespace Insight.Autofac.Extensions.MediatR
 
         internal MediatorValidationModule(params Assembly[] assemblies)
         {
+            if (assemblies == null || assemblies.Length == 0)
+                throw new ArgumentException("Empty assemblies!");
+            
             Assemblies = assemblies;
         }
 
