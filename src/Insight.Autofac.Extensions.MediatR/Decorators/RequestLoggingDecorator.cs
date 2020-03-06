@@ -7,24 +7,25 @@ using Microsoft.Extensions.Logging;
 
 namespace Insight.Autofac.Extensions.MediatR
 {
-    internal sealed class RequestLoggingDecorator<TRequest, TResponse> : IRequestHandler<TRequest, TResponse>, IHandlerDecorator
+    internal sealed class RequestLoggingDecorator<TRequest, TResponse> : 
+        IRequestHandler<TRequest, TResponse>, IHandlerDecorator
         where TRequest : IRequest<TResponse>
     {
         private readonly ILogger<RequestLoggingDecorator<TRequest, TResponse>> _logger;
 
         private readonly IRequestHandler<TRequest, TResponse> _inner;
 
-        public RequestLoggingDecorator(IRequestHandler<TRequest, TResponse> inner,
-            ILogger<RequestLoggingDecorator<TRequest, TResponse>> logger)
+        public RequestLoggingDecorator(ILogger<RequestLoggingDecorator<TRequest, TResponse>> logger, 
+            IRequestHandler<TRequest, TResponse> inner)
         {
+            if (logger == null)
+                throw new ArgumentNullException(nameof(logger));
+            
             if (inner == null)
                 throw new ArgumentNullException(nameof(inner));
 
-            if (logger == null)
-                throw new ArgumentNullException(nameof(logger));
-
-            _inner = inner;
             _logger = logger;
+            _inner = inner;
         }
 
         [DebuggerStepThrough]

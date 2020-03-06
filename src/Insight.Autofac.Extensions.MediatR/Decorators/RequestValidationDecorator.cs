@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using FluentValidation;
@@ -7,15 +8,22 @@ using MediatR;
 namespace Insight.Autofac.Extensions.MediatR
 {
     internal sealed class RequestValidationDecorator<TRequest, TResponse> :
-        IRequestHandler<TRequest, TResponse>
+        IRequestHandler<TRequest, TResponse>, IHandlerDecorator
         where TRequest : IRequest<TResponse>
     {
         private readonly IEnumerable<AbstractValidator<TRequest>> _validators;
+        
         private readonly IRequestHandler<TRequest, TResponse> _inner;
 
         public RequestValidationDecorator(IEnumerable<AbstractValidator<TRequest>> validators,
             IRequestHandler<TRequest, TResponse> inner)
         {
+            if (validators == null) 
+                throw new ArgumentNullException(nameof(validators));
+            
+            if (inner == null)
+                throw new ArgumentNullException(nameof(inner));
+
             _validators = validators;
             _inner = inner;
         }
@@ -38,6 +46,11 @@ namespace Insight.Autofac.Extensions.MediatR
                         throw new RequestValidationException(result.ToString());
                 }
             }
+        }
+
+        public Type GetHandlerType()
+        {
+            return _inner.GetHandlerType();
         }
     }
 }

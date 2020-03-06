@@ -1,4 +1,7 @@
-﻿using System.Reflection;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 using Autofac;
 using MediatR;
 using MediatR.Pipeline;
@@ -16,10 +19,14 @@ namespace Insight.Autofac.Extensions.MediatR
 
         internal MediatorModule(params Assembly[] assemblies)
         {
+            if (assemblies == null || assemblies.Length == 0)
+                throw new ArgumentException("Empty assemblies!");
+
             Assemblies = assemblies;
         }
 
-        internal MediatorModule(Assembly[] assemblies, bool registerLoggingModule, bool registerValidationModule) :
+        internal MediatorModule(Assembly[] assemblies, bool registerLoggingModule,
+            bool registerValidationModule) :
             this(assemblies)
         {
             RegisterLoggingModule = registerLoggingModule;
