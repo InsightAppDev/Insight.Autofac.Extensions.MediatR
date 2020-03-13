@@ -16,9 +16,11 @@ namespace Insight.Autofac.Extensions.MediatR.Samples.Console
 
         private static async Task SampleWithValidation()
         {
-            var simpleContainer = BuildContainerWithValidation();
-
-            var mediatR = simpleContainer.Resolve<IMediator>();
+            var containerBuilder = BuildSimpleContainer();
+            containerBuilder.AddMediatorValidation("Insight.Autofac.Extensions.MediatR.Samples.Application");
+            var container = containerBuilder.Build();
+           
+            var mediatR = container.Resolve<IMediator>();
 
             var dateTime = await mediatR.Send(new GetCurrentUtcDateTimeStringQuery("MM-dd-yyyy"));
 
@@ -27,7 +29,7 @@ namespace Insight.Autofac.Extensions.MediatR.Samples.Console
 
         private static async Task SimpleSample()
         {
-            var simpleContainer = BuildSimpleContainer();
+            var simpleContainer = BuildSimpleContainer().Build();
 
             var mediatR = simpleContainer.Resolve<IMediator>();
 
@@ -36,22 +38,13 @@ namespace Insight.Autofac.Extensions.MediatR.Samples.Console
             System.Console.WriteLine($"Current datetime is: {dateTime}");
         }
 
-        private static IContainer BuildSimpleContainer()
+        private static ContainerBuilder BuildSimpleContainer()
         {
             var builder = new ContainerBuilder();
 
             builder.AddMediator("Insight.Autofac.Extensions.MediatR.Samples.Application");
 
-            return builder.Build();
-        }
-
-        private static IContainer BuildContainerWithValidation()
-        {
-            var builder = new ContainerBuilder();
-
-            builder.AddMediator(new[] {"Insight.Autofac.Extensions.MediatR.Samples.Application"}, false, true);
-
-            return builder.Build();
+            return builder;
         }
     }
 }
