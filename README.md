@@ -7,3 +7,8 @@ Insight.Autofac.Extensions.MediatR
 About
 ----------------------------------
 This is infrastructure extensions which allow you easy use MediatR with Autofac. With this extensions you can register all your handlers from assemblies in autofac container by one line of code.
+
+
+Samples
+----------------------------------
+You can run samles from samples folder.
