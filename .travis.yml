@@ -10,6 +10,9 @@ jobs:
   - stage: build
     name: build solution
     script: dotnet restore && dotnet build
+  - stage: test
+    name: test solution
+    script: ./run-tests.sh
   - stage: publish
     name: publish nuget package
     if: tag IS present

@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Insight.Autofac.Extensions.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{C653DD4C-2A9C-4AA6-93CF-174B778319D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Insight.Autofac.Extensions.MediatR.Tests", "Insight.Autofac.Extensions.MediatR.Tests\Insight.Autofac.Extensions.MediatR.Tests.csproj", "{FD4E89C8-A75E-4701-BDC4-4C0A211831BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Insight.Autofac.Extensions.MediatR.Tests", "tests\Insight.Autofac.Extensions.MediatR.Tests\Insight.Autofac.Extensions.MediatR.Tests.csproj", "{2C0F1BFC-5756-4774-B7C0-5383037EED77}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +31,10 @@ Global
 		{AFB02E00-60E0-4AA0-A4B9-68082BB62491}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFB02E00-60E0-4AA0-A4B9-68082BB62491}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFB02E00-60E0-4AA0-A4B9-68082BB62491}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FD4E89C8-A75E-4701-BDC4-4C0A211831BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FD4E89C8-A75E-4701-BDC4-4C0A211831BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FD4E89C8-A75E-4701-BDC4-4C0A211831BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FD4E89C8-A75E-4701-BDC4-4C0A211831BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C0F1BFC-5756-4774-B7C0-5383037EED77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C0F1BFC-5756-4774-B7C0-5383037EED77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C0F1BFC-5756-4774-B7C0-5383037EED77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C0F1BFC-5756-4774-B7C0-5383037EED77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
