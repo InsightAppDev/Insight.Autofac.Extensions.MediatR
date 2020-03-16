@@ -10,9 +10,9 @@ namespace Insight.Autofac.Extensions.MediatR.Samples.Console
     {
         static async Task Main(string[] args)
         {
-            //          await SimpleSample();
+            await SimpleSample();
 
-//            await SampleWithValidation();
+            await SampleWithValidation();
 
             await LoggingSample();
         }

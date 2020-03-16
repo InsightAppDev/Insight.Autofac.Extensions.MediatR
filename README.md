@@ -24,6 +24,17 @@ Validation decorator
 By AddValidationDecorator(assemblies) call you will register all AbstractValidator<TCommand> from passed assemblies. They will be resolved in RequestValidationdecorator for TCommand as IEnumberable<AbstractValidator<TCommand>> and Validate() will be called for them. 
 If at least one validator is not valid, an RequestValidationException will be thrown.
 
+It's matters in which order you register decorators. First registered will be closer to the target handler. As example:
+```csharp
+var containerBuilder = new ContainerBuilder()
+    .AddMediator("Insight.Autofac.Extensions.MediatR.Samples.Application")
+    .AddMediatorValidation("Insight.Autofac.Extensions.MediatR.Samples.Application")
+    .AddMediatorLogging();
+```
+
+It this case logging decorator will be executed before validation.
+
+
 Samples
 ----------------------------------
 You can run samles from samples folder.
