@@ -7,6 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac" Version="5.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.2" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
     <PackageReference Include="xunit" Version="2.4.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
@@ -14,8 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\samples\Insight.Autofac.Extensions.MediatR.Samples.Application\Insight.Autofac.Extensions.MediatR.Samples.Application.csproj" />
-    <ProjectReference Include="..\src\Insight.Autofac.Extensions.MediatR\Insight.Autofac.Extensions.MediatR.csproj" />
+    <ProjectReference Include="..\..\samples\Insight.Autofac.Extensions.MediatR.Samples.Application\Insight.Autofac.Extensions.MediatR.Samples.Application.csproj" />
+    <ProjectReference Include="..\..\src\Insight.Autofac.Extensions.MediatR\Insight.Autofac.Extensions.MediatR.csproj" />
   </ItemGroup>
+
 
 </Project>
