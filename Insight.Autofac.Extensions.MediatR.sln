@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{C653
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Insight.Autofac.Extensions.MediatR.Tests", "tests\Insight.Autofac.Extensions.MediatR.Tests\Insight.Autofac.Extensions.MediatR.Tests.csproj", "{2C0F1BFC-5756-4774-B7C0-5383037EED77}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Insight.Autofac.Extensions.MediatR.Samples.WebApi", "samples\Insight.Autofac.Extensions.MediatR.Samples.WebApi\Insight.Autofac.Extensions.MediatR.Samples.WebApi.csproj", "{6A02CB42-1888-461C-9E0A-D7A15A1F53B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{2C0F1BFC-5756-4774-B7C0-5383037EED77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C0F1BFC-5756-4774-B7C0-5383037EED77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C0F1BFC-5756-4774-B7C0-5383037EED77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A02CB42-1888-461C-9E0A-D7A15A1F53B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A02CB42-1888-461C-9E0A-D7A15A1F53B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A02CB42-1888-461C-9E0A-D7A15A1F53B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A02CB42-1888-461C-9E0A-D7A15A1F53B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -42,6 +48,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{BE162E55-EE39-4AAC-8772-8F0C6D5014D4} = {C653DD4C-2A9C-4AA6-93CF-174B778319D6}
 		{AFB02E00-60E0-4AA0-A4B9-68082BB62491} = {C653DD4C-2A9C-4AA6-93CF-174B778319D6}
+		{6A02CB42-1888-461C-9E0A-D7A15A1F53B3} = {C653DD4C-2A9C-4AA6-93CF-174B778319D6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E3994C03-E156-4B09-817D-65EEEF54C613}
