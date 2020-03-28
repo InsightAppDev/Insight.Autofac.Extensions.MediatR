@@ -33,8 +33,3 @@ var containerBuilder = new ContainerBuilder()
 ```
 
 It this case logging decorator will be executed before validation.
-
-
-Samples
-----------------------------------
-You can run samles from samples folder.
